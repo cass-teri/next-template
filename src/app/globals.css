@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Blue	HEX = #5BCEFA	RGB = 91 206 250*/
+/*Pink	HEX = #F5A9B8	RGB = 245 169 184*/
+/*White	HEX = #FFFFFF	RGB = 255 255 255*/
+
+
+
+@layer base {
+    :root {
+        --background: rgb( 255, 255, 255);
+        --foreground: rgb(64,64,64);
+        --primary: rgb(245, 169, 184);
+        --primary-foreground: rgb(22,22,22);
+        --secondary: rgb( 91, 206, 250);
+        --secondary-foreground: rgb(22,22,22);
+        --accent: rgb(244,244,245);
+        --accent-foreground: rgb(22,22,22);
+        --muted: rgb( 200, 200, 200);
+        --muted-foreground: rgb( 64, 64, 64);
+        --destructive: rgb(241,92,92);
+        --destructive-foreground: rgb( 255, 255, 255);
+        --border: rgb( 200, 200, 200);
+        --input: rgb(228,228,231);
+        --ring: rgb(225,29,72);
+        --radius: 0.5rem;
+        --card: rgb( 255, 255, 255);
+        --card-foreground: rgb(22,22,22);
+        --popover: rgb( 255, 255, 255);
+        --popover-foreground: rgb(22,22,22);
+    }
+
+    .dark {
+        --background: rgb(64,64,64);
+        --foreground: rgb(191,191,191);
+        --card: rgb(22,22,22);
+        --card-foreground: rgb(242,242,242);
+        --popover: rgb(64,64,64,0.85);
+        --popover-foreground: rgb(242,242,242);
+        --primary: rgb(245, 169, 184);
+        --primary-foreground: rgb(242,242,242);
+        --secondary: rgb( 91, 206, 250);
+        --secondary-foreground: rgb(242,242,242);
+        --muted: rgb(22,22,22);
+        --muted-foreground: rgb(161,161,170);
+        --accent: #292524;
+        --accent-foreground: rgb(242,242,242);
+        --destructive: rgb(241,92,92);
+        --destructive-foreground: rgb(242,242,242);
+        --border: rgb(55,55,55);
+        --input: rgb(39,39,42);
+        --ring: rgb(225,29,72);
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    ul, ol {
+        list-style: revert;
+    }
+
+    code{
+        all: revert;
+    }
+
+    button{
+        @apply text-primary-foreground;
+    }
+    p{
+        all:revert;
+    }
+
+blockquote {
+    @apply text-base text-primary-foreground p-4 border-l-4 border-primary;
+}
+
+    td{
+        @apply border-2 border-border p-2;
+    }
+
+    a,Link {
+        cursor: default;
+        color: rgb( 91, 206, 250);
+        background-color: transparent;
+    }
+    hr{
+        @apply border-4 border-accent my-4;
+    }
+
+    h1 {
+        @apply text-4xl text-primary-foreground font-bold m-4;
+    }
+    h2 {
+        @apply text-3xl text-primary-foreground font-bold m-4;
+    }
+    h3 {
+        @apply text-2xl text-primary-foreground font-bold m-4;
+    }
+    h4 {
+        @apply text-xl  text-primary-foreground font-bold m-2;
+    }
+    h5 {
+        @apply text-lg  text-primary-foreground font-bold m-2;
+    }
+}
